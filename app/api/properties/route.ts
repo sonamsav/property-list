@@ -23,7 +23,7 @@ const properties = [
     id: 3,
     title: "Godrej Eternal Palms",
     location: "Andheri",
-    price: "₹ 7 Cr - ₹ 10 Cr",
+    price: "₹ 7 Cr",
     bhk: "4",
     type: "buy",
     image: "https://images.unsplash.com/photo-1494526585095-c41746248156"
@@ -32,7 +32,7 @@ const properties = [
     id: 4,
     title: "Lodha Aureus",
     location: "Sewri, Mumbai",
-    price: "₹ 4.6 Cr - ₹ 5 Cr",
+    price: "₹ 4.6 Cr",
     bhk: "2",
     type: "buy",
     image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"
@@ -43,8 +43,8 @@ const properties = [
     title: "Oberoi Sky Heights",
     location: "Borivali East",
     price: "₹ 3.2 Cr",
-    bhk: "3",
-    type: "buy",
+    bhk: "4",
+    type: "Buy",
     image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
   },
   {
@@ -53,7 +53,7 @@ const properties = [
     location: "Powai",
     price: "₹ 1.2 L / month",
     bhk: "3",
-    type: "rent",
+    type: "Rent",
     image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
   },
   {
@@ -62,7 +62,7 @@ const properties = [
     location: "Lower Parel",
     price: "₹ 5.5 Cr",
     bhk: "3",
-    type: "buy",
+    type: "Buy",
     image: "https://images.unsplash.com/photo-1484154218962-a197022b5858"
   },
   {
@@ -88,7 +88,7 @@ const properties = [
     title: "Kalpataru Avana",
     location: "Parel",
     price: "₹ 6.8 Cr",
-    bhk: "3 & 4",
+    bhk: "4",
     type: "buy",
     image: "https://images.unsplash.com/photo-1501183638710-841dd1904471"
   },
@@ -124,7 +124,7 @@ const properties = [
     title: "Sheth Vasant Oasis",
     location: "Andheri East",
     price: "₹ 55,000 / month",
-    bhk: "2",
+    bhk: "1",
     type: "rent",
     image: "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
   }

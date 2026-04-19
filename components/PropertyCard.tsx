@@ -50,6 +50,15 @@ export default function PropertyCard({ property }: { property: Property }) {
           </h2>
 
           <p className="text-xs text-gray-500">By Developer</p>
+<p
+  className={`text-xs font-semibold px-2 py-1 rounded-md w-fit ${
+    property.type === "buy"
+      ? "bg-blue-100 text-blue-700"
+      : "bg-green-100 text-green-700"
+  }`}
+>
+  {property.type.charAt(0).toUpperCase() + property.type.slice(1)}
+</p>
 
           <p className="text-sm text-gray-700">{property.location}</p>
 
@@ -61,11 +70,11 @@ export default function PropertyCard({ property }: { property: Property }) {
 
           <div className="flex items-center justify-between">
             <p className="text-base font-semibold text-gray-900">
-              {property.price}
+              {property.price} 
             </p>
 
             <span className="bg-green-600 text-white text-sm px-4 py-1.5 rounded-md">
-              View Details
+              View →
             </span>
           </div>
         </div>
