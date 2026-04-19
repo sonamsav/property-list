@@ -29,8 +29,10 @@ export default function Home() {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const res = await axios.get("/api/properties");
-        setProperties(res.data);
+        const res = await fetch("/api/properties");
+        const data = await res.json();
+
+        setProperties(data);
       } catch (err) {
         console.error(err);
         setError("Failed to load properties");
@@ -94,8 +96,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-            <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
-
+      <header className="sticky top-0 z-50 border-b bg-white shadow-sm">
         <div className="mx-auto max-w-7xl px-6 py-8">
           <h2 className="text-xl font-bold text-gray-900">Property Listings</h2>
 
@@ -129,11 +130,14 @@ export default function Home() {
               {["all", "buy", "rent"].map((type) => (
                 <button
                   key={type}
-                  onClick={() => setSelectedType(type as "all" | "buy" | "rent")}
-                  className={`px-4 text-sm capitalize transition ${selectedType === type
-                    ? "bg-blue-600 text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
-                    }`}
+                  onClick={() =>
+                    setSelectedType(type as "all" | "buy" | "rent")
+                  }
+                  className={`px-4 text-sm capitalize transition ${
+                    selectedType === type
+                      ? "bg-blue-600 text-white"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
+                  }`}
                 >
                   {type}
                 </button>
@@ -156,7 +160,9 @@ export default function Home() {
         </h3>
 
         {loading ? (
-          <div className="text-center py-20 text-gray-500">Loading properties...</div>
+          <div className="text-center py-20 text-gray-500">
+            Loading properties...
+          </div>
         ) : error ? (
           <div className="text-center py-20 text-red-500">{error}</div>
         ) : (
@@ -176,7 +182,7 @@ export default function Home() {
                     <PropertyCard key={property.id} property={property} />
                   ))}
                 </div>
- <div className="flex items-center justify-center gap-4 mt-10">
+                <div className="flex items-center justify-center gap-4 mt-10">
                   <button
                     onClick={goPrev}
                     disabled={currentPage === 1}
