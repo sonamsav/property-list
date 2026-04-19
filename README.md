@@ -32,25 +32,29 @@ app/
 components/
  └── PropertyCard.tsx     # Reusable card component
 ```
-## ⚙️ Installation & Setup
-
-### 1. Clone the repository
+##  Installation & Setup
+### 1. Get the code
+If accessing via GitHub:
 
 ```bash
 git clone https://github.com/your-username/property-app.git
 cd property-app
+```
 ### 2. Install dependencies
 ```bash
 npm install
 ```
 
-### 3. Run locally
+---
+
+### 3. Run the project
+
 ```bash
 npm run dev
 ```
----
 
-## 🌐 Deployment
+
+## Deployment
 
 The project is deployed using **Vercel**.
 
@@ -59,7 +63,7 @@ The project is deployed using **Vercel**.
 
 ---
 
-## 📊 Data Handling
+## Data Handling
 * Property data is served via a **Next.js API route**
 * Data is structured with:
   * id
