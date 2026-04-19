@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import PropertyCard from "@/components/PropertyCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
